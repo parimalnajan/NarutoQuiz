@@ -19,7 +19,7 @@ function play(question,options,answer){
   var ans=readlineSync.question("\n"+chalk.magentaBright(question)+"\n"+options+"\n");
   var ans=ans.toLowerCase();
    while(ans < "a" || ans > "d" || ans.length != 1){
-      console.log(chalk.red('Please enter valid option i.e a,b,c,d OR A,B,C,D));
+      console.log(chalk.red('Please enter valid option i.e a,b,c,d OR A,B,C,D'));
       ans = readlineSync.question(chalk.white('Answer: '));
     }
 
