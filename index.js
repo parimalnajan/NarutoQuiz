@@ -19,7 +19,7 @@ function play(question,options,answer){
   var ans=readlineSync.question("\n"+chalk.magentaBright(question)+"\n"+options+"\n");
   var ans=ans.toLowerCase();
    while(ans < "a" || ans > "d" || ans.length != 1){
-      console.log(chalk.red('Enter a valid option i.e a,b,c or d'));
+      console.log(chalk.red('Please enter valid option i.e a,b,c,d OR A,B,C,D));
       ans = readlineSync.question(chalk.white('Answer: '));
     }
 
@@ -87,11 +87,11 @@ var questions=[
     play(questions[i].question,questions[i].options,questions[i].answer);
 
     if(i===3&&score<4){
-      console.log("\n you did not reach level2");
+      console.log("\n you did not reach stage2");
       break;
     }
     else if(i===3&&score===4){
-      console.log(chalk.green("Congratulations! you have entered level2"))
+      console.log(chalk.green("Congratulations! you have entered stage2"))
     }
   }
   console.log("\n \n"+"your total score: "+score);
